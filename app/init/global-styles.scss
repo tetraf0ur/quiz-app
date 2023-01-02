@@ -1,0 +1,235 @@
+*,
+div,
+li,
+a {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  color: #fff;
+  box-sizing: border-box;
+  letter-spacing: 0.05em;
+  outline: none;
+  // transition: .2s all ease;
+}
+
+body {
+  overflow-x: hidden;
+  background: #282828;
+}
+
+:root {
+  --orange: #f56e03;
+}
+
+.danger { 
+  min-width: 100%!important;
+  white-space: nowrap;
+  font-size: 16px;
+}
+
+p.swiper-no-swiping, .list.archive { 
+  max-height: 150px;
+  overflow: hidden;
+  overflow-y: scroll;
+  word-break: break-word;
+  padding-right: 30px;
+  font-size: 16px;
+
+  &::-webkit-scrollbar-track {
+    border: 1px solid #403F3F;
+    padding: 2px 0;
+    background-color: #403F3F;
+    border-radius: 10px;
+  }
+  
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px var(--orange);
+    background-color: var(--orange);
+    border: 1px solid var(--orange);
+  }
+}
+
+
+.modal-opened {
+  overflow: hidden;
+}
+
+.page_container { 
+  width: 992px;
+  margin: 0 auto;
+}
+
+.main {
+  // position: relative; 
+  display: flex;
+  flex-direction: column;
+}
+
+.content { 
+  margin-bottom: 85px;
+  min-height: calc(100vh - 280px);
+}
+
+@media screen and (max-width: 768px) { 
+  .page_container { 
+    width: 355px;
+  }
+  .content { 
+    
+  }
+}
+
+button {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+
+  &:disabled {
+    background: #af5a15 !important;
+    cursor: not-allowed !important;
+  }
+}
+
+input[type=text] {
+  &:disabled {
+    color: rgba(255, 255, 255, 0.50);
+  }
+}
+
+.loader {
+  position: relative;
+  margin: 0px auto;
+  width: 200px;
+  height:200px;
+}
+
+.circular-loader {
+  -webkit-animation: rotate 2s linear infinite;
+          animation: rotate 2s linear infinite;
+  height: 100%;
+  -webkit-transform-origin: center center;
+      -ms-transform-origin: center center;
+          transform-origin: center center;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: auto;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.loader-path {
+  stroke-dasharray: 150,200;
+  stroke-dashoffset: -10;
+  -webkit-animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+          animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+  stroke-linecap: round;
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes dash {
+  0% {
+    stroke-dasharray: 1,200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -124;
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1,200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -124;
+  }
+}
+@-webkit-keyframes color {
+  0% {
+    stroke: #ffffff;
+  }
+  40% {
+    stroke: #ffffff;
+  }
+  66% {
+    stroke: #ffffff;
+  }
+  80%, 90% {
+    stroke: #ffffff;
+  }
+}
+@keyframes color {
+  0% {
+    stroke: #ffffff;
+  }
+  40% {
+    stroke: #ffffff;
+  }
+  66% {
+    stroke: #ffffff;
+  }
+  80%, 90% {
+    stroke: #ffffff;
+  }
+}
+
+@keyframes fadeInUp-animation {
+  from {
+    opacity: 0;
+    transform: translate3d(-50%, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.complain-task-result-modal-layout {
+  z-index: 200 !important;
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #282828 inset !important;
+    -webkit-text-fill-color: #fff !important;
+}

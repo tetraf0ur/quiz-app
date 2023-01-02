@@ -1,0 +1,43 @@
+{
+  "name": "work247-next-client",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@pankod/refine-nextjs-router": "^3.38.0",
+    "axios": "^0.27.2",
+    "classnames": "^2.3.2",
+    "dayjs": "^1.11.5",
+    "effector": "^22.3.0",
+    "effector-react": "^22.3.0",
+    "effector-react-form": "^3.0.0-4",
+    "next": "12.3.1",
+    "patronum": "^1.12.2",
+    "query-string": "^7.1.1",
+    "ra-data-json-server": "^4.4.4",
+    "react": "18.2.0",
+    "react-admin": "^4.4.4",
+    "react-dom": "18.2.0",
+    "sass": "^1.54.9",
+    "socket.io-client": "^4.5.4",
+    "styled-components": "^5.3.5",
+    "swiper": "^8.4.2",
+    "toastify-js": "^1.12.0"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^6.3.1",
+    "@types/node": "18.7.18",
+    "@types/react": "18.0.20",
+    "@types/react-dom": "18.0.6",
+    "@types/styled-components": "^5.1.26",
+    "@types/toastify-js": "^1.11.1",
+    "eslint": "8.23.1",
+    "eslint-config-next": "12.3.1",
+    "typescript": "4.8.3"
+  }
+}
